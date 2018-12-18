@@ -1,3 +1,14 @@
+/*
+// font size
+$font-size-large: 1.8rem;
+// rem sizes
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4rem;
+$desktop-breakpoint: 45rem;
+*/
+
 .App {
   text-align: center;
 }
@@ -8,13 +19,12 @@
 }
 
 .App-header {
-  align-items: flex-start;
+  align-items: center;
   background-color: #282c34;
   color: white;
   display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
+  font-size: calc(15px + 2vmin);
+  justify-content: space-between;
   min-height: 10vh;
   padding-left: 20px;
   text-align: left;
@@ -24,11 +34,43 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.button {
+  background: #282c34;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 1.2rem;
+  text-decoration: none;
+}
+
+.button--link {
+  background: none;
+  text-decoration: none;
+}
+
+.content-container {
+  align-content: flex-start;
+  margin: 0 0 1.6rem 3.2rem;
+  max-width: 80rem;
+  padding: 0 1.6rem;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
 }
