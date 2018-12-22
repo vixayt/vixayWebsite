@@ -1,12 +1,14 @@
 import React from 'react';
 
 const HomePage = () => (
-  <div className="content-container">
-    <h2>
+  <div className="homepage">
+    <h2 className="homepage">
       Welcome to my website!
-      <blockquote className="resumeYaml">
-      </blockquote>
     </h2>
+    <p className="homepage">
+      This website is still a work in progress. This site has been deployed using an AWS 
+      Elastic Beanstalk instance.  
+    </p>
   </div>
 )
 

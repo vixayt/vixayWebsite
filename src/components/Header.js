@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import pdf from '../static/vixayResume.pdf';
-
 const Header = () => (
   <header className="App-header header">
     <div className="content-container">
@@ -11,7 +9,7 @@ const Header = () => (
           <h1>Vixay</h1>
         </Link>
         <Link className="header" to="/resume">
-          <button className="button button--link">Resume</button>
+          <h3 className="tabs">Resume</h3>
         </Link>
       </div>
     </div>
