@@ -79,3 +79,7 @@ div.resume {
   /* padding: 10px; */
   width: 700px;
 }
+
+.resume-company {
+  font-weight: bold;
+}
