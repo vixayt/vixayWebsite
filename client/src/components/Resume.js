@@ -18,15 +18,25 @@ const Resume = () => (
       <TabPanel label={tabs[1]} key={tabs[1]}>
         <div>
           <div className="resume-company">
-            NIKE, Inc.
+            NIKE, INC.
           </div>
-            <p>
+            <p className="resume-2rem">
               Position: SW QA Engineer
             </p>
         </div>
       </TabPanel>
       <TabPanel label={tabs[2]} key={tabs[2]}>
-        BL
+        <div>
+          <div className="resume-school">
+            Portland State University
+          </div>
+          <p>
+            Computer Science Graduate Student
+            <p className="resume-2rem">
+              Expected Graduate date: Summer 2020
+            </p>
+          </p>
+        </div>
       </TabPanel>
     </Tabs>
   </div>
