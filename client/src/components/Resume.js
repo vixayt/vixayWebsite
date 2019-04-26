@@ -33,7 +33,7 @@ const Resume = () => (
           <p>
             Computer Science Graduate Student
             <p className="resume-2rem">
-              Expected Graduate date: Summer 2020
+              Expected Graduate date: End of Spring 2020
             </p>
           </p>
         </div>

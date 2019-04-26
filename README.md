@@ -5,5 +5,4 @@ As this is my personal website, most of the tools in the page will be tailored
 toward my needs.
 
 Wishlist
-- Stock information backend
 - Current/Forecasted Weather in my hometown
