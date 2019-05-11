@@ -81,16 +81,20 @@ div.resume {
   width: 700px;
 }
 
-.resume-company {
+div.resume-company {
   font-weight: bold;
   padding-top: 1.5rem;
 }
 
-.resume-school {
+div.resume-school {
   font-weight: bold;
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
-.resume-2rem {
+div.resume-1rem {
+  padding-top: 1rem;
+}
+
+p.resume-2rem {
   padding-left: 2rem;
 }

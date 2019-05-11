@@ -11,6 +11,9 @@ const Header = () => (
         <Link className="header" to="/resume">
           <h3 className="tabs">Resume</h3>
         </Link>
+        <Link className="header" to="/kobestats">
+          <h3 className="tabs">Kobe Stats</h3>
+        </Link>
       </div>
     </div>
   </header>
