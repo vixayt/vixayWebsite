@@ -3,28 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Theodore Vixay — full-stack and site reliability engineer in Portland, Oregon. Experience at Nike, New Relic, and Masterlinq."
     />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#1d7454" />
 
     <title>Theodore Vixay</title>
   </head>
   <body>
     <header class="header">
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+      </nav>
       <div class="text-box">
         <h1 class="heading-primary">
           <span class="heading-primary-main">Vixay</span>
-          <span class="heading-primary-sub"
-            >Software Engineer/Full Stack Developer</span
-          >
+          <span class="heading-primary-sub">Software Engineer / Full Stack Developer</span>
         </h1>
+        <p class="hero-tagline">
+          I build and run reliable software, from React front ends to cloud
+          infrastructure, and untangle the systems in between.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-white" href="#experience">See my work</a>
+          <a class="btn btn-outline" href="#contact">Get in touch</a>
+        </div>
       </div>
     </header>
+
+    <main>
+      <section id="about" class="section">
+        <h2 class="section-title">About</h2>
+        <div class="about about-grid">
+          <figure class="about-photo">
+            <img
+              src="img/family.jpg"
+              alt="Theodore with his family and their two golden retrievers"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+          </figure>
+          <div class="about-text">
+          <p>
+            I'm Theodore, a Portland-based software engineer with more than six
+            years of experience across full-stack development, site reliability,
+            and production support at <strong>Nike</strong>,
+            <strong>New Relic</strong>, and <strong>Masterlinq</strong>.
+          </p>
+          <p>
+            I do my best work when I own a system end to end: building it,
+            keeping it healthy in production, and fixing it when the data or
+            integrations get messy. I care about security, observability, and
+            leaving codebases better than I found them.
+          </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-alt">
+        <h2 class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-head">
+              <h3>Software Engineer 3 <span class="company">· Masterlinq</span></h3>
+              <span class="dates">May 2026 – Oct 2026</span>
+            </div>
+            <ul>
+              <li>Owned production reliability for a multi-tenant e-commerce platform (.NET, React, MongoDB, Azure), fixing recurring crashes and slowdowns and introducing warm-up deployment slots.</li>
+              <li>Found and fixed a cross-tenant script-injection vulnerability and led an authorization audit that uncovered 57 unprotected admin endpoints.</li>
+              <li>Stabilized order posting to retailers' Ascend and Lightspeed POS systems across 30 accounts, fixing blocked queues, tax and discount errors, and duplicate orders.</li>
+              <li>Repaired supplier, payment, and shipping integrations (QBP, Stripe, ShipStation, Shopify), restoring 6,211 hidden products; built CI/CD workflows in GitHub Actions and reviewed PRs across 12 repos.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <div class="job-head">
+              <h3>Digital Launch Engineer <span class="company">· Nike</span></h3>
+              <span class="dates">Nov 2023 – Jan 2026</span>
+            </div>
+            <ul>
+              <li>Tier 2 support for e-commerce launches and peak events, analyzing logs, writing database queries, and supporting engineering teams.</li>
+              <li>Built Python-based Slack bots to automate alerts, workflows, and operational support.</li>
+              <li>Built observability dashboards in Splunk, New Relic, and SignalFx and tracked order fulfillment and inventory after launches.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <div class="job-head">
+              <h3>Software Engineer II <span class="company">· New Relic</span></h3>
+              <span class="dates">Sep 2020 – Jun 2023</span>
+            </div>
+            <ul>
+              <li>Developed features in Node.js, React, and Ruby on Rails on a Kanban team, deployed with Docker and Kubernetes.</li>
+              <li>Led multiple projects through the full development lifecycle with stakeholders and product management.</li>
+              <li>Used Terraform to automate deployment of alerts, dashboards, and services for better fault tolerance and deployment history.</li>
+              <li>Mentored and onboarded new team members. Promoted from Associate Software Engineer to Software Engineer II.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <div class="job-head">
+              <h3>Site Reliability Engineer <span class="company">· Nike</span></h3>
+              <span class="dates">Mar 2018 – Sep 2020</span>
+            </div>
+            <ul>
+              <li>Grew from QA engineer intern to SRE intern to Site Reliability Engineer.</li>
+              <li>Built features in C#, Angular, Java, Node.js, and React on Azure and AWS.</li>
+              <li>Implemented monitoring and alerting with SignalFx and Catchpoint, and automated data validation with Postman scripts.</li>
+            </ul>
+          </li>
+          <li class="job">
+            <div class="job-head">
+              <h3>Senior Technical Support <span class="company">· Portland State University</span></h3>
+              <span class="dates">Jan 2019 – Mar 2020</span>
+            </div>
+            <ul>
+              <li>Coordinated and trained more than 80 student volunteers providing Tier 1 IT support at the Computer Action Team, and handled Tier 2 escalations.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>HomeCal</h3>
+            <p>
+              A self-hosted family calendar kiosk I'm building as a DIY
+              replacement for a Skylight wall calendar. A TypeScript sync
+              worker pulls Google Calendar and iCloud events (including
+              recurring events and time zones) into MongoDB, and a TanStack
+              Start app renders month, week, and day views on a wall-mounted
+              screen. The whole stack starts with one Docker Compose command,
+              and only the worker ever sees calendar credentials.
+            </p>
+            <ul class="tags">
+              <li>TypeScript</li><li>React</li><li>TanStack Start</li><li>MongoDB</li><li>Docker</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>tvixay.com</h3>
+            <p>
+              This site. Started as a React app in 2018, rebuilt as dependency-free
+              HTML and CSS that loads fast on any device.
+            </p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>AWS</li>
+            </ul>
+            <a class="card-link" href="https://github.com/vixayt/vixayWebsite">View source →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+          <div>
+            <h3>Languages</h3>
+            <ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>C#</li><li>Java</li><li>Ruby</li><li>SQL</li><li>C++</li></ul>
+          </div>
+          <div>
+            <h3>Frameworks</h3>
+            <ul class="tags"><li>React</li><li>Next.js</li><li>Node.js</li><li>.NET Core</li><li>Rails</li><li>Django</li><li>Angular</li><li>Spring</li></ul>
+          </div>
+          <div>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tags"><li>AWS</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>GitHub Actions</li><li>Jenkins</li></ul>
+          </div>
+          <div>
+            <h3>Data &amp; Observability</h3>
+            <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>New Relic</li><li>Splunk</li><li>SignalFx</li></ul>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/vixayt/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/vixayt" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+      <p>© 2026 Theodore Vixay</p>
+    </footer>
   </body>
 </html>

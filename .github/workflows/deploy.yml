@@ -1,0 +1,52 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# Required for GitHub OIDC -> AWS role (no long-lived AWS keys stored in GitHub)
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          cp index.html favicon.ico site.webmanifest _site/
+          cp -r css img _site/
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION || 'us-west-2' }}
+
+      - name: Upload assets (cached 1 day)
+        run: |
+          aws s3 sync _site "s3://${{ vars.S3_BUCKET }}" --delete \
+            --exclude "*.html" --exclude "site.webmanifest" \
+            --cache-control "public, max-age=86400"
+
+      - name: Upload HTML and manifest (always revalidate)
+        run: |
+          aws s3 sync _site "s3://${{ vars.S3_BUCKET }}" \
+            --exclude "*" --include "*.html" --include "site.webmanifest" \
+            --cache-control "no-cache"
+
+      - name: Invalidate CloudFront cache
+        if: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"
