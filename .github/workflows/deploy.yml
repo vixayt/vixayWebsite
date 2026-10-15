@@ -18,16 +18,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Stage site files
         run: |
           mkdir -p _site
           cp index.html favicon.ico site.webmanifest _site/
           cp -r css img _site/
+          # Cache-bust the stylesheet so CloudFront/browsers never pair new HTML with old CSS
+          sed -i "s|css/style.css\"|css/style.css?v=${GITHUB_SHA::7}\"|" _site/index.html
+          grep -q "style.css?v=" _site/index.html
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION || 'us-west-2' }}
